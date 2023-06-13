@@ -19,7 +19,7 @@ jobs:
         run: mvn -DskipTests -B package --no-transfer-progress --file ./pom.xml
 
       - name: rename Artefakt
-        run: mv  ./target/*digitalbank*.war "./target/${{ github.event.client_payload.artifactName }}.war"
+        run: mv ./target/*digitalbank*.war "./target/${{ github.event.client_payload.artifactName }}.war"
 
       - uses: actions/upload-artifact@master
         with:
